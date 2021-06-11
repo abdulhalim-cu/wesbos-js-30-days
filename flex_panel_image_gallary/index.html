@@ -51,12 +51,6 @@
               if (e.propertyName.includes('flex')) {
                   this.classList.toggle('open-active');
               }
-              activatedPanels = document.querySelectorAll(`.panel:not(.${this.classList[1]})`);
-              activatedPanels.forEach(panel => toggleDeactive(panel));
-          }
-
-          function toggleDeactive(elm) {
-            elm.classList.remove('open-active');
           }
 
           panels.forEach(panel => panel.addEventListener('click', toggleOpen));
